@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right, #ffe0ec, #ffcde1);
+    color: #333;
+}
+
+.auth-page, .auth-page form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ffb6c1;
+    width: 300px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #f78fb3;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fc5c9c;
+}
+
+.error {
+    color: red;
+    background: #ffe0e0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #ffb6c1;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #f8c0d8;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card .actions {
+    margin-top: 10px;
+}
+
+.card .actions a {
+    margin: 0 8px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #f78fb3;
+    transition: color 0.3s;
+}
+
+.card .actions a:hover {
+    color: #d63384;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.filter-form input,
+.filter-form select,
+.filter-form button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.filter-form button {
+    background-color: #f78fb3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-form button:hover {
+    background-color: #fc5c9c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff0f5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px #f78fb3;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    color: #f78fb3;
+    cursor: pointer;
+}
+
+.album-list {
+    margin: 20px;
+    text-align: center;
+}
+
+.album-list a {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #ffc8dd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.album-list a:hover,
+.album-list a.active {
+    background-color: #f78fb3;
+    color: white;
+}
+
+body.auth-page {
+    background: linear-gradient(to bottom right, #ffe4f0, #ffc8dd);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: #fff0f5;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(247, 143, 179, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-form input,
+.upload-form textarea,
+.upload-form button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.upload-form button {
+    background-color: #f78fb3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.upload-form button:hover {
+    background-color: #fc5c9c;
+}
+
+.upload-form label {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+
+    .album-list a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .form-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .upload-form input,
+    .upload-form textarea,
+    .upload-form button {
+        font-size: 14px;
+    }
+}
+
